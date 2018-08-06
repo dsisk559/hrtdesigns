@@ -1,0 +1,39 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  visibility: hidden;
+
+  .btn-line {
+    width: 28px;
+    height: 4px;
+    margin: 0 0 4px 0;
+    background: $dark;
+    border-radius: 2px;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .nav-right {
+    float: right;
+    margin: 18px;
+  }
+  a {
+    float: left;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: $dark;
+    font-family: $heading-font;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+}

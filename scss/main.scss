@@ -1,0 +1,86 @@
+@import "config";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: $dark;
+  height: 100%;
+  margin: 0;
+  font-family: $text-font;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: $heading-font;
+  font-weight: 600;
+}
+
+//Portfolio
+//Masthead
+.masthead {
+  background: url("/dist/img/Masthead-background.svg");
+  background-size: cover;
+  margin-bottom: 0;
+
+  .logoLarge {
+    width: 800px;
+    padding-left: 19vw;
+    padding-top: 25vh;
+  }
+
+  p {
+    padding-left: 26vw;
+    padding-bottom: 17vh;
+    width: 65vw;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.page-title {
+  background: $dark;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+
+  h1 {
+    padding: 2vh;
+  }
+}
+
+.portfolio-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 2rem 1rem;
+
+  .portfolio-item {
+    background: $accent-light;
+    border-bottom: 3px $accent-dark solid;
+
+    img {
+      width: 100%;
+      border: 3px $dark solid;
+    }
+  }
+}
+
+footer {
+  background: $dark;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+
+  p {
+    padding: 2vh;
+  }
+}

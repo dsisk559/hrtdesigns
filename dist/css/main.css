@@ -1,0 +1,92 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  visibility: hidden; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 4px;
+    margin: 0 0 4px 0;
+    background: #0d0b04;
+    border-radius: 2px; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  .menu .nav-right {
+    float: right;
+    margin: 18px; }
+  .menu a {
+    float: left;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #0d0b04;
+    font-family: "Oswald", sans-serif; }
+    .menu a.active {
+      font-weight: 600; }
+
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  color: #0d0b04;
+  height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.25; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600; }
+
+.masthead {
+  background: url("/dist/img/Masthead-background.svg");
+  background-size: cover;
+  margin-bottom: 0; }
+  .masthead .logoLarge {
+    width: 800px;
+    padding-left: 19vw;
+    padding-top: 25vh; }
+  .masthead p {
+    padding-left: 26vw;
+    padding-bottom: 17vh;
+    width: 65vw;
+    font-weight: 400;
+    margin: 0; }
+
+.page-title {
+  background: #0d0b04;
+  color: #fff;
+  text-align: center;
+  margin-top: 0; }
+  .page-title h1 {
+    padding: 2vh; }
+
+.portfolio-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 2rem 1rem; }
+  .portfolio-group .portfolio-item {
+    background: #d3e8ce;
+    border-bottom: 3px #1f371b solid; }
+    .portfolio-group .portfolio-item img {
+      width: 100%;
+      border: 3px #0d0b04 solid; }
+
+footer {
+  background: #0d0b04;
+  color: #fff;
+  text-align: center;
+  margin-top: 0; }
+  footer p {
+    padding: 2vh; }
