@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   margin-top: 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 2; }
   .topnav .identity {
     display: block;
     float: left;
@@ -40,11 +41,14 @@
   margin: 0;
   padding: 0; }
 
+html {
+  height: 100%; }
+
 body {
   background-color: #fff;
   color: #000;
   font-family: "Lato", sans-serif;
-  padding-top: 40px;
+  margin-top: 40px;
   height: 100%; }
 
 h1,
@@ -60,15 +64,53 @@ a {
 p {
   line-height: 1.25rem; }
 
+.btn {
+  display: inline-block;
+  background: #f15a24;
+  width: 135px;
+  height: 35px;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.85ch;
+  border-radius: 5px;
+  padding: 5px; }
+  .btn:hover {
+    background: #f9b49c;
+    color: #000; }
+
 .hero-image {
   background: url(/dist/img/hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
-  height: 50%; }
+  height: 95vh;
+  z-index: 0; }
   .hero-image .hero-text {
-    text-align: center; }
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 75vw; }
+    .hero-image .hero-text h1 {
+      display: inline-block;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.85ch;
+      padding: 0.25rem 0;
+      margin-bottom: 1rem;
+      border-bottom: 3px #f15a24 solid; }
+    .hero-image .hero-text p {
+      font-size: 2.5rem;
+      letter-spacing: 0.15ch;
+      line-height: 2.75rem;
+      margin-bottom: 1rem; }
 
 @media screen and (max-width: 768px) {
   .topnav .menu .nav-item {
