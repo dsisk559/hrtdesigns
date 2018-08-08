@@ -9,22 +9,23 @@
     width: 28px;
     height: 4px;
     margin: 0 0 4px 0;
-    background: #0d0b04;
+    background: #38301d;
     border-radius: 2px; }
 
 .menu {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
   .menu .nav-right {
     float: right;
-    margin: 18px; }
+    margin: 10px; }
   .menu a {
     float: left;
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: #0d0b04;
+    color: #fff;
     font-family: "Oswald", sans-serif; }
     .menu a.active {
       font-weight: 600; }
@@ -34,7 +35,7 @@
   margin: 0; }
 
 body {
-  color: #0d0b04;
+  color: #38301d;
   height: 100%;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -49,42 +50,67 @@ h3 {
   font-weight: 600; }
 
 .masthead {
-  background: url("/dist/img/Masthead-background.svg");
-  background-size: cover;
-  margin-bottom: 0; }
+  background: url("/dist/img/bg.png");
+  background-size: 115%;
+  background-position: -12vw -5vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
   .masthead .logoLarge {
-    width: 800px;
-    padding-left: 19vw;
-    padding-top: 25vh; }
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding-top: 10%; }
   .masthead p {
-    padding-left: 26vw;
-    padding-bottom: 17vh;
-    width: 65vw;
+    text-align: center;
+    font-size: 1.25rem;
     font-weight: 400;
-    margin: 0; }
+    color: #fff;
+    padding: 0 2rem 7vh; }
 
 .page-title {
-  background: #0d0b04;
+  background: #38301d;
   color: #fff;
   text-align: center;
-  margin-top: 0; }
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2; }
   .page-title h1 {
     padding: 2vh; }
 
 .portfolio-group {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 2rem 1rem; }
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 1rem;
+  width: 100%; }
   .portfolio-group .portfolio-item {
-    background: #d3e8ce;
-    border-bottom: 3px #1f371b solid; }
+    position: relative; }
+    .portfolio-group .portfolio-item .title,
+    .portfolio-group .portfolio-item .discription {
+      display: block;
+      padding: 1rem;
+      color: #000;
+      visibility: hidden;
+      position: absolute;
+      left: 0; }
+    .portfolio-group .portfolio-item .title {
+      top: 0; }
+    .portfolio-group .portfolio-item .discription {
+      bottom: 0; }
     .portfolio-group .portfolio-item img {
-      width: 100%;
-      border: 3px #0d0b04 solid; }
+      object-fit: cover;
+      object-position: center;
+      height: auto;
+      width: 100%; }
+  .portfolio-group :hover .title,
+  .portfolio-group :hover .discription {
+    visibility: visible; }
+  .portfolio-group :hover img {
+    opacity: 0.5; }
 
 footer {
-  background: #0d0b04;
+  background: #38301d;
   color: #fff;
   text-align: center;
   margin-top: 0; }

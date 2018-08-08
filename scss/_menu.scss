@@ -19,17 +19,18 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 
   .nav-right {
     float: right;
-    margin: 18px;
+    margin: 10px;
   }
   a {
     float: left;
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: $dark;
+    color: #fff;
     font-family: $heading-font;
 
     &.active {

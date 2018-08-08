@@ -24,25 +24,29 @@ h3 {
   font-weight: 600;
 }
 
-//Portfolio
+//Page: Portfolio
 //Masthead
 .masthead {
-  background: url("/dist/img/Masthead-background.svg");
-  background-size: cover;
-  margin-bottom: 0;
+  background: url("/dist/img/bg.png");
+  background-size: 115%;
+  background-position: -12vw -5vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   .logoLarge {
-    width: 800px;
-    padding-left: 19vw;
-    padding-top: 25vh;
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding-top: 10%;
   }
 
   p {
-    padding-left: 26vw;
-    padding-bottom: 17vh;
-    width: 65vw;
+    text-align: center;
+
+    font-size: 1.25rem;
     font-weight: 400;
-    margin: 0;
+    color: #fff;
+    padding: 0 2rem 7vh;
   }
 }
 
@@ -51,25 +55,60 @@ h3 {
   color: #fff;
   text-align: center;
   margin-top: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 
   h1 {
     padding: 2vh;
   }
 }
 
+// Portfolio
 .portfolio-group {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 2rem 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem 1rem;
+  width: 100%;
 
   .portfolio-item {
-    background: $accent-light;
-    border-bottom: 3px $accent-dark solid;
+    position: relative;
+
+    .title,
+    .discription {
+      display: block;
+      padding: 1rem;
+      color: #000;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+    }
+
+    .title {
+      top: 0;
+    }
+
+    .discription {
+      bottom: 0;
+    }
 
     img {
+      object-fit: cover;
+      object-position: center;
+      height: auto;
       width: 100%;
-      border: 3px $dark solid;
+    }
+  }
+
+  :hover {
+    .title,
+    .discription {
+      visibility: visible;
+    }
+
+    img {
+      opacity: 0.5;
     }
   }
 }
