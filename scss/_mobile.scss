@@ -1,0 +1,44 @@
+// Widescreens
+@include mediaXl {
+}
+// Desktops & Laptops
+@include mediaLg {
+}
+// Tablets & Small Laptops
+@include mediaMd {
+  .topnav .menu .nav-item {
+    display: none;
+  }
+
+  .topnav .menu .icon {
+    float: right;
+    display: block;
+  }
+
+  .identity.responsive {
+    display: none;
+  }
+
+  .topnav.responsive {
+    position: fixed;
+
+    .menu {
+      float: none;
+
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .nav-item {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}
+// Smartphones
+@include mediaSm {
+}

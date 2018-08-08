@@ -1,125 +1,49 @@
 @import "config";
 @import "menu";
 
+// General document Setup
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  color: $dark;
-  height: 100%;
-  margin: 0;
+  background-color: $bg-color;
+  color: $text-color;
   font-family: $text-font;
-  font-weight: 300;
-  line-height: 1.25;
+  padding-top: 40px;
+  height: 100%;
 }
 
-// Headings
 h1,
 h2,
-h3 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6,
+a {
   font-family: $heading-font;
-  font-weight: 600;
+  letter-spacing: 0.25ch;
 }
 
-//Page: Portfolio
-//Masthead
-.masthead {
-  background: url("/dist/img/bg.png");
-  background-size: 115%;
-  background-position: -12vw -5vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  .logoLarge {
-    display: block;
-    width: 50%;
-    margin: auto;
-    padding-top: 10%;
-  }
-
-  p {
-    text-align: center;
-
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #fff;
-    padding: 0 2rem 7vh;
-  }
-}
-
-.page-title {
-  background: $dark;
-  color: #fff;
-  text-align: center;
-  margin-top: 0;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-
-  h1 {
-    padding: 2vh;
-  }
+p {
+  line-height: 1.25rem;
 }
 
 // Portfolio
-.portfolio-group {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 1rem 1rem;
-  width: 100%;
+// Hero Image
+.hero-image {
+  background: $homepage-hero-image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 50%;
 
-  .portfolio-item {
-    position: relative;
-
-    .title,
-    .discription {
-      display: block;
-      padding: 1rem;
-      color: #000;
-      visibility: hidden;
-      position: absolute;
-      left: 0;
-    }
-
-    .title {
-      top: 0;
-    }
-
-    .discription {
-      bottom: 0;
-    }
-
-    img {
-      object-fit: cover;
-      object-position: center;
-      height: auto;
-      width: 100%;
-    }
-  }
-
-  :hover {
-    .title,
-    .discription {
-      visibility: visible;
-    }
-
-    img {
-      opacity: 0.5;
-    }
+  .hero-text {
+    text-align: center;
   }
 }
 
-footer {
-  background: $dark;
-  color: #fff;
-  text-align: center;
-  margin-top: 0;
-
-  p {
-    padding: 2vh;
-  }
-}
+@import "mobile";

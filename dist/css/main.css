@@ -1,118 +1,92 @@
-.menu-btn {
-  position: absolute;
-  z-index: 3;
-  right: 35px;
-  top: 35px;
-  cursor: pointer;
-  visibility: hidden; }
-  .menu-btn .btn-line {
-    width: 28px;
-    height: 4px;
-    margin: 0 0 4px 0;
-    background: #38301d;
-    border-radius: 2px; }
-
-.menu {
+.topnav {
+  overflow: hidden;
+  background-color: #2e260d;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 3; }
-  .menu .nav-right {
-    float: right;
-    margin: 10px; }
-  .menu a {
-    float: left;
+  margin-top: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+  .topnav .identity {
     display: block;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    font-family: "Oswald", sans-serif; }
-    .menu a.active {
-      font-weight: 600; }
+    float: left;
+    font-size: 0;
+    background: url(/dist/img/Logo.svg);
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 180px;
+    margin: 5px 16px; }
+  .topnav .menu {
+    float: right; }
+    .topnav .menu a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-size: 16px; }
+      .topnav .menu a:hover {
+        background-color: #d4b966;
+        color: black; }
+    .topnav .menu .active {
+      background-color: #f15a24;
+      color: white; }
+    .topnav .menu .icon {
+      display: none; }
 
 * {
   box-sizing: border-box;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 body {
-  color: #38301d;
-  height: 100%;
-  margin: 0;
+  background-color: #fff;
+  color: #000;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
-  line-height: 1.25; }
+  padding-top: 40px;
+  height: 100%; }
 
 h1,
 h2,
-h3 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6,
+a {
   font-family: "Oswald", sans-serif;
-  font-weight: 600; }
+  letter-spacing: 0.25ch; }
 
-.masthead {
-  background: url("/dist/img/bg.png");
-  background-size: 115%;
-  background-position: -12vw -5vh;
+p {
+  line-height: 1.25rem; }
+
+.hero-image {
+  background: url(/dist/img/hero.png);
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
-  .masthead .logoLarge {
-    display: block;
-    width: 50%;
-    margin: auto;
-    padding-top: 10%; }
-  .masthead p {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #fff;
-    padding: 0 2rem 7vh; }
+  background-size: cover;
+  position: relative;
+  height: 50%; }
+  .hero-image .hero-text {
+    text-align: center; }
 
-.page-title {
-  background: #38301d;
-  color: #fff;
-  text-align: center;
-  margin-top: 0;
-  position: sticky;
-  top: 0;
-  z-index: 2; }
-  .page-title h1 {
-    padding: 2vh; }
-
-.portfolio-group {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 1rem 1rem;
-  width: 100%; }
-  .portfolio-group .portfolio-item {
-    position: relative; }
-    .portfolio-group .portfolio-item .title,
-    .portfolio-group .portfolio-item .discription {
-      display: block;
-      padding: 1rem;
-      color: #000;
-      visibility: hidden;
-      position: absolute;
-      left: 0; }
-    .portfolio-group .portfolio-item .title {
-      top: 0; }
-    .portfolio-group .portfolio-item .discription {
-      bottom: 0; }
-    .portfolio-group .portfolio-item img {
-      object-fit: cover;
-      object-position: center;
-      height: auto;
-      width: 100%; }
-  .portfolio-group :hover .title,
-  .portfolio-group :hover .discription {
-    visibility: visible; }
-  .portfolio-group :hover img {
-    opacity: 0.5; }
-
-footer {
-  background: #38301d;
-  color: #fff;
-  text-align: center;
-  margin-top: 0; }
-  footer p {
-    padding: 2vh; }
+@media screen and (max-width: 768px) {
+  .topnav .menu .nav-item {
+    display: none; }
+  .topnav .menu .icon {
+    float: right;
+    display: block; }
+  .identity.responsive {
+    display: none; }
+  .topnav.responsive {
+    position: fixed; }
+    .topnav.responsive .menu {
+      float: none; }
+      .topnav.responsive .menu .icon {
+        position: absolute;
+        right: 0;
+        top: 0; }
+      .topnav.responsive .menu .nav-item {
+        float: none;
+        display: block;
+        text-align: left; } }
