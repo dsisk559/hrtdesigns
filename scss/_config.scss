@@ -12,7 +12,7 @@ $homepage-hero-image: url(/dist/img/hero.png);
 
 //Media Quary Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
