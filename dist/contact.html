@@ -36,30 +36,25 @@
                 Get in Touch
             </h1>
             <div class="contact-form">
-                <form action="https://getsimpleform.com/messages?form_api_token=ad7d4f6311e9314a5eb012eaae4887c3" method="post">>
+                <form action="https://getsimpleform.com/messages?form_api_token=ad7d4f6311e9314a5eb012eaae4887c3" method="post">
+
+                    <input type='hidden' name='redirect_to' value='<https://dsisk559.github.io/contact-ty.html>'>
 
                     <label for="fname">First Name</label>
-                    <input type="text" name="firstname" id="fname" placeholder="Your name...">
+                    <input type="text" name="firstname" id="fname" placeholder="Your name..." required>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" name="lastname" id="lname" placeholder="Your last name...">
+                    <input type="text" name="lastname" id="lname" placeholder="Your last name..." required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email address" required>
 
                     <label for="subject">Subject</label>
-                    <textarea name="subject" id="subject"></textarea>
+                    <textarea name="subject" id="subject" required></textarea>
 
                     <input class="btn" type="submit" value="Send">
-
                 </form>
-
-                <!-- <form action="https://getsimpleform.com/messages?form_api_token=ad7d4f6311e9314a5eb012eaae4887c3" method="post">
-                    <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-                <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-                <!-- all your input fields here.... -->
-                <input type='text' name='test' />
-                <input type='submit' value='Test form' />
-                </form> -->
             </div>
-
 
         </div>
     </main>
