@@ -44,10 +44,18 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-form {
+    width: 75vw;
+  }
 }
 // Smartphones
 @include mediaSm {
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    width: 90vw;
   }
 }

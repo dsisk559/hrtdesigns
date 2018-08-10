@@ -64,6 +64,15 @@ a {
 p {
   line-height: 1.25rem; }
 
+.lg-heading {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.85ch;
+  padding: 0.25rem 0;
+  margin: 1rem;
+  text-align: center; }
+
 .btn {
   display: inline-block;
   background: #f15a24;
@@ -82,11 +91,9 @@ p {
     color: #000; }
 
 .hero-image {
-  background: url(/dist/img/hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
   height: 95vh;
   z-index: 0; }
@@ -112,14 +119,10 @@ p {
       line-height: 2.75rem;
       margin-bottom: 1rem; }
 
-.lg-heading {
-  display: block;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.85ch;
-  padding: 0.25rem 0;
-  margin: 1rem;
-  text-align: center; }
+.home .hero-image {
+  background-image: url(/dist/img/hero.png);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken; }
 
 .projects {
   display: grid;
@@ -162,6 +165,31 @@ p {
   .projects :hover img {
     opacity: 0.5; }
 
+.contact .hero-image {
+  background-image: url(/dist/img/stefan-steinbauer-23268-unsplash.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  height: 50vh; }
+
+.contact-form {
+  display: block;
+  width: 50vw;
+  margin: 0 auto 1rem; }
+  .contact-form input[type="text"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4b966;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; }
+  .contact-form textarea {
+    height: 10rem; }
+  .contact-form input[type="submit"] {
+    border: none; }
+
 footer {
   text-align: center;
   padding: 0.5rem;
@@ -192,8 +220,12 @@ footer {
         display: block;
         text-align: left; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .contact-form {
+    width: 75vw; } }
 
 @media screen and (max-width: 600px) {
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .contact-form {
+    width: 90vw; } }
